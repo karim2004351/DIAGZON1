@@ -1,0 +1,33 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<s:Header>
+		<a:Action s:mustUnderstand="1">http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Issue</a:Action>
+		<a:MessageID>urn:uuid:8cf3c477-cf0e-4fdc-921e-a0ea1a2eaba7</a:MessageID>
+		<a:ReplyTo>
+			<a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+		</a:ReplyTo>
+		<VsDebuggerCausalityData xmlns="http://schemas.microsoft.com/vstudio/diagnostics/servicemodelsink">uIDPo5CLMDSE1o5Hv2Nqx2RjCq4AAAAAvOX6rPsizECKiRI6RXETqGXpU0pR7vxJnnlVV3PAnSoACQAA</VsDebuggerCausalityData>
+		<a:To s:mustUnderstand="1">https://sts.fiatgroup.com/adfs/services/trust/13/usernamemixed</a:To>
+		<o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+			<u:Timestamp u:Id="_0">
+				<u:Created>placeholder_3</u:Created>
+				<u:Expires>placeholder_4</u:Expires>
+			</u:Timestamp>
+			<o:UsernameToken u:Id="uuid-a6c725db-c023-499a-8e75-a4816f2bcc3b-1">
+				<o:Username>placeholder_1</o:Username>
+				<o:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">placeholder_2</o:Password>
+			</o:UsernameToken>
+		</o:Security>
+	</s:Header>
+	<s:Body>
+		<trust:RequestSecurityToken xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">
+			<wsp:AppliesTo xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+				<a:EndpointReference>
+					<a:Address>https://wt2aftersales.fiat.com/CyberSecurity</a:Address>
+				</a:EndpointReference>
+			</wsp:AppliesTo>
+			<trust:KeyType>http://docs.oasis-open.org/ws-sx/ws-trust/200512/Bearer</trust:KeyType>
+			<trust:RequestType>http://docs.oasis-open.org/ws-sx/ws-trust/200512/Issue</trust:RequestType>
+			<trust:TokenType>urn:oasis:names:tc:SAML:2.0:assertion</trust:TokenType>
+		</trust:RequestSecurityToken>
+	</s:Body>
+</s:Envelope>
